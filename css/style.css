@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --bg-color: #000000;
+  --accent-color: rgba(255, 0, 100, 0.8);
+  --accent-glow: rgba(255, 0, 100, 0.3);
+  --text-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 1rem;
+}
+
+.card {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 20px var(--accent-color), 0 0 40px var(--accent-glow);
+  animation: fadeIn 1.2s ease-in-out;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  text-shadow: 0 0 10px var(--accent-color), 0 0 20px #ff3383;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+button {
+  background: transparent;
+  color: var(--accent-color);
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+button:hover {
+  background: var(--accent-color);
+  color: var(--text-color);
+  box-shadow: 0 0 25px #ff3399, 0 0 40px var(--accent-color);
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .card {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}
